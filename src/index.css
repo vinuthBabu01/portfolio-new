@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-primary-bg text-text-primary font-sans antialiased;
+    background-image: linear-gradient(135deg, #1a1a2e, #121233);
+  }
+  ::selection {
+    @apply bg-accent-1 text-primary-bg;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-secondary-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-1 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-hover;
+}
+/* For section transitions (using your previous example) */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* --- ADD THESE STYLES FOR CARD FLIP --- */
+.perspective {
+  perspective: 1000px; /* Creates the 3D space for children. Adjust value for more/less perspective. */
+}
+
+.experience-card-inner {
+  transform-style: preserve-3d; /* Allows children to be positioned in 3D space relative to this parent. */
+}
+
+.experience-card-front,
+.experience-card-back {
+  backface-visibility: hidden; /* Hides the back of the card when it's not facing the viewer. */
+  -webkit-backface-visibility: hidden; /* For Safari browser compatibility. */
+  /* Ensure transitions on transform if you want smoother manual flips, though Tailwind handles the main flip */
+  /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */ /* Example, already handled by Tailwind's duration class on inner div */
+}
+
+/* Project Card Styling */
+.project-card {
+  @apply bg-secondary-bg p-6 rounded-xl shadow-card transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-card-hover;
+}
+
+/* Tech Tag Styling */
+.tech-tag {
+  @apply text-xs font-medium px-2 py-1 bg-tag-bg text-accent-1 rounded-full transition-colors duration-200 hover:bg-tag-hover hover:text-primary-bg;
+}
+
+/* Typography */
+h1, h2, h3 {
+  @apply font-heading font-bold text-accent-1;
+}
+p {
+  @apply text-text-secondary leading-relaxed;
+}
+.section {
+  @apply py-16 md:py-24;
+}
+
+@layer utilities {
+  .bg-accent-hover {
+    background-color: #26ffe3;
+  }
+}
