@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop'; // Optional
+import TicTacToe from './components/TicTacToe';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Experience />
         <Projects />
         <Contact />
+        <TicTacToe />
       </main>
       <Footer />
       <ScrollToTop /> {/* Optional */}
