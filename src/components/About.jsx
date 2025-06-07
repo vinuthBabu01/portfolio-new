@@ -21,8 +21,8 @@ const About = () => {
     <section id="about" className="py-20 bg-secondary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle id="about-title">About Me</SectionTitle>
-        
-        <motion.div 
+
+        <motion.div
           className="max-w-3xl mx-auto text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,11 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary leading-relaxed">
-          Hi! I’m Vinuth Babu Kalmidi, a Full-Stack Software Engineer with a Master’s in Computer Engineering from Syracuse University and 2+ years of industry experience. I’ve built scalable backend systems, user focused web applications, and worked on projects ranging from automation workflows to data-driven dashboards. I enjoy learning, working collaboratively, and building software that solves real-world problems.
+            Hi! I’m Vinuth Babu Kalmidi, a Full-Stack Software Engineer with a Master’s in Computer Engineering from Syracuse University and 2+ years of industry experience. I’ve built scalable backend systems, user focused web applications, and worked on projects ranging from automation workflows to data-driven dashboards. I enjoy learning, working collaboratively, and building software that solves real-world problems.
+          </p>
+
+          <p className="text-sm text-text-primary font-mono mt-4 leading-relaxed">
+          Authorized to work in the U.S. under F-1 OPT(STEM) without employer sponsorship at present. May require future sponsorship.
           </p>
         </motion.div>
 
@@ -48,7 +52,7 @@ const About = () => {
             >
               <div className="flex items-center mb-3">
                 {
-                  <FaUniversity className="text-accent-1 mr-3 text-2xl" /> 
+                  <FaUniversity className="text-accent-1 mr-3 text-2xl" />
                 }
                 <h4 className="text-xl font-semibold text-text-primary">{edu.institution}</h4>
               </div>

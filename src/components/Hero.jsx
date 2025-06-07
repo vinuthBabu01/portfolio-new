@@ -12,7 +12,7 @@ const Hero = () => {
       {/* <div className="absolute inset-0 opacity-5">
         <img src="/path/to/subtle-code-pattern.svg" alt="background pattern" className="w-full h-full object-cover"/>
       </div> */}
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,8 +44,8 @@ const Hero = () => {
           <p className="text-text-secondary max-w-2xl mx-auto mb-8 text-base sm:text-lg">
             {personalInfo.bio}
           </p>
-        </motion.div>
 
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,6 @@ const Hero = () => {
             <FaDownload className="mr-2" /> Download CV
           </a>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,12 +90,12 @@ const Hero = () => {
           ))}
         </motion.div>
       </div>
-      
+
       {/* Scroll down indicator (optional) */}
-      <ScrollLink 
-        to="about" 
-        smooth={true} 
-        duration={800} 
+      <ScrollLink
+        to="about"
+        smooth={true}
+        duration={800}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
