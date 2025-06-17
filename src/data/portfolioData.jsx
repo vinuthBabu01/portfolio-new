@@ -193,10 +193,10 @@ export const experience = [
     duration: "October 2021 - March 2023",
     points: [
       "Built scalable microservices and automated loan workflows that reduced processing time by 40% and improved operational efficiency by 30% for enterprise-grade Loan Management Systems.",
-      "Optimized core backend APIs using Node.js and Kafka, resulting in 50% faster response times, improved performance during peak load, and reliable real-time data sync.",
+      "Optimized core backend APIs using Node.js and Kafka, resulting in 30% faster response times, improved performance during peak load, and reliable real-time data sync.",
       "Integrated APIs with financial institutions (e.g., ABFL, CreditSaison) to automate onboarding and foreclosure workflows, reducing borrower onboarding time by 25% and manual errors by 35%.",
       "Designed and implemented a dynamic job assignment engine based on user availability and skillsets, improving customer service turnaround and reducing SLA violations.",
-      "Refactored legacy services into modular, testable microservices and collaborated with DevOps to implement CI/CD pipelines, cutting deployment time and post-release bugs by 40%.",
+      "Refactored legacy services into modular, testable microservices and collaborated with DevOps to implement CI/CD pipelines, cutting deployment time and post-release bugs by 20%.",
       "Investigated and resolved production-critical issues including batch job failures and database inconsistencies, ensuring 99.9% system uptime and uninterrupted loan operations.",
       "Collaborated across product, QA, and engineering teams to align technical design with business goals, contributing to a platform serving 10,000+ users with high reliability."
     ],

@@ -34,7 +34,7 @@ const About = () => {
           </p>
 
           <p className="text-sm text-text-primary font-mono mt-4 leading-relaxed">
-          Authorized to work in the U.S. under F-1 OPT(STEM) without employer sponsorship at present. May require future sponsorship.
+          "Authorized to work in the U.S. under F-1 OPT (STEM); no employer sponsorship needed currently, though future sponsorship may be required. Open to relocation across the United States."
           </p>
         </motion.div>
 
