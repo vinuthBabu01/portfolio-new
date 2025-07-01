@@ -19,11 +19,12 @@ const cardVariants = {
 
 const techNameMap = {
   JavaScript: 'javascript',
+  'AWS IoT Core':'amazonwebservices',
   Python: 'python',
   'C++': 'cplusplus',
   HTML: 'html5',
   CSS: 'css3',
-  MicroPython: 'micropython',
+  MicroPython: 'python',
   'React.js': 'react',
   React: 'react',
   Angular: 'angular',
@@ -35,11 +36,8 @@ const techNameMap = {
   PostgreSQL: 'postgresql',
   MySQL: 'mysql',
   Docker: 'docker',
-  'AWS IoT Core': 'aws-iot',
-  AWS: 'amazonwebservices',
   'Google Cloud': 'googlecloud',
   MQTT: 'mqtt',
-  'REST API': 'api',
   'Stack Overflow API': 'stackoverflow',
   GitHub: 'github',
   'GitHub Actions': 'githubactions',
@@ -47,7 +45,7 @@ const techNameMap = {
   'Jupyter Notebook': 'jupyter',
   Pandas: 'pandas',
   NumPy: 'numpy',
-  'scikit-learn': 'scikit',
+'Scikit-learn': 'scikitlearn',
   'Hugging Face': 'huggingface',
   RoBERTa: 'roberta',
   BERT: 'bert',
@@ -57,14 +55,22 @@ const techNameMap = {
   'REST API' :'rest-api-blue-logo',
   'Machine Learning':'MachineLearning',
   'Data Mining':'DataMining',
-  'Cloud Computing':'CloudComputing'
+  'Cloud Computing':'cloudflare'
 
 };
 
 const getTechIcon = (techName) => {
   const mapped = techNameMap[techName] || techName ;
+  const formattedname = mapped.toLowerCase().replace(/\s+/g, '');
+  let cdnUrl='';
 
-  const cdnUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${mapped}/${mapped}-original.svg`;
+  if(formattedname == 'amazonwebservices'){
+     cdnUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${formattedname}/${formattedname}-plain-wordmark.svg`;
+  }else{
+    cdnUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${formattedname}/${formattedname}-original.svg`;
+  }
+
+  
   const localUrl = `/${mapped}.svg`;
 
   // Check if the mapped name is valid

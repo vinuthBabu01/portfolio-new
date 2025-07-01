@@ -5,7 +5,7 @@ export const personalInfo = {
   phone: "+1-315-455-0180",
   title: "Full Stack Developer",
   email: "kvinuthbabu001@gmail.com",
-  linkedin: "https://www.linkedin.com/in/vinuth-babu/",
+  linkedin: "https://www.linkedin.com/in/vinuth-kalmidi/",
   github: "https://github.com/vinuthBabu01",
   resumeLink: "/VinuthKalmidiResume.pdf", // Make sure your resume is in public/
   bio: "Full Stack Engineer with a strong focus on backend systems, APIs, and data-driven solutions. Skilled in Node.js, React, MongoDB, and Docker, with hands-on experience in IoT, NLP, and cloud-native development. Dedicated to delivering scalable and reliable software.",
@@ -30,20 +30,20 @@ export const education = [
 export const projects = [
   {
     title: "IoT-Based Smart Parking System with Dynamic Pricing",
-    tech: ["ESP32", "MicroPython", "MQTT", "AWS IoT Core", "Python", "IoT", "Cloud Computing"],
+    tech: ["ESP32", "MicroPython", "MQTT", "Python","AWS IoT Core", "IoT", "Cloud Computing"],
     description: "An IoT-based smart parking solution that uses ESP32 microcontrollers, ultrasonic sensors, and AWS IoT Core (via MQTT) for real-time slot detection. Developed a Python-based dynamic pricing engine to optimize parking fees based on demand and availability. The system enables automated slot monitoring and revenue optimization for parking spaces.",
     date: "Jan 2025 - May 2025",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "IoT",
     icon: <FaCar size={24} className="text-accent-1" />
   },
   {
     title: "TechNERD - NLP & Machine Learning Pipeline",
-    tech: ["Python", "RoBERTa", "BERT", "Scikit-learn", "Pandas", "NLP"],
+    tech: ["Python", "RoBERTa", "BERT", "Scikit-learn", "Pandas", "NLP", ],
     description: "Built an NLP pipeline using RoBERTa and Hugging Face Transformers for Named Entity Recognition (NER) on technical Stack Exchange posts, achieving 74% cosine similarity. Implemented a predictive model (MSE: 9.11) to forecast post engagement based on input features. Automated data scraping, cleaning, and feature extraction pipelines to process large datasets efficiently.",
     date: "Sep 2024 - Dec 2024",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "NLP",
     icon: <FaBrain size={24} className="text-accent-1" />
@@ -53,7 +53,7 @@ export const projects = [
     tech: ["Python", "JavaScript", "React", "OOP", "REST API", "JSON", "UML", "MongoDB"],
     description: "Designed a backend-driven airline management system with real-time Weather API integration for dynamic operational decisions. Built using object-oriented principles, it handles flight management, scheduling, and error handling. Supported by comprehensive system documentation including SRS, UML diagrams, and CRC cards for architecture clarity.",
     date: "Mar 2024 – May 2024",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Software Design",
     icon: <FaPlane size={24} className="text-accent-1" />
@@ -63,7 +63,7 @@ export const projects = [
     tech: ["Python", "Pandas", "Plotly", "Stack Overflow API", "Data Mining"],
     description: "A web-based dashboard that analyzes and visualizes developer trends from Stack Overflow and GitHub. Utilized Stack Overflow APIs and GitHub APIs for real-time data fetching and displayed interactive charts on programming trends, hot technologies, and community engagement.",
     date: "Sep 2023 – Dec 2023",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Data Analytics",
     icon: <FaChartLine size={24} className="text-accent-1" />
@@ -73,7 +73,7 @@ export const projects = [
     tech: ["Python", "Jupyter Notebook", "Matplotlib", "Machine Learning", "AWID Dataset"],
     description: "Implemented machine learning models to detect anomalies in Wi-Fi traffic using the AWID dataset. Preprocessed large-scale network data and visualized model performance using Matplotlib to highlight intrusion patterns and classification results.",
     date: "Aug 2020 – May 2021",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Cybersecurity",
     icon: <FaShieldAlt size={24} className="text-accent-1" />
@@ -83,7 +83,7 @@ export const projects = [
     tech: ["JavaScript", "Angular", "HTML", "CSS", "REST API"],
     description: "Developed a real-time football scores web app by integrating live sports APIs to display current match data, team stats, and league information across multiple tournaments.",
     date: "Jan 2020 – Jun 2020",
-    githubLink: null,
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Web Development",
     icon: <FaFutbol size={24} className="text-accent-1" />
@@ -213,6 +213,7 @@ export const skills = {
 
   cloudAndDevOps: [
     { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+    {name: "AWS IoT Core", icon :"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"},
     { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
     { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" }, 

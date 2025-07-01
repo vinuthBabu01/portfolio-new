@@ -22,7 +22,7 @@ const techNameMap = {
   NodeJS: 'nodejs',
   'Node.js': 'nodejs',
   Express: 'express',
-  'Express.js':'express',
+  'Express.js': 'express',
   'C++': 'cplusplus',
   'C#': 'csharp',
   JS: 'javascript',
@@ -35,8 +35,8 @@ const techNameMap = {
   Python: 'python',
   AWS: 'amazonwebservices',
   SQL: 'mysql',
-  'REST APIs':'',
-  'Kafka':'apachekafka'
+  'REST APIs': '',
+  'Kafka': 'apachekafka'
 };
 
 const getTechIcon = (techName) => {
@@ -112,26 +112,32 @@ const Experience = () => {
                 )}
 
                 {item.techStack && (
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {item.techStack.map((tech, i) => {
-                      const iconUrl = getTechIcon(tech);
-                      return (
-                        <span
-                          key={i}
-                          className="flex items-center gap-1 bg-accent-1/10 text-accent-1 px-2 py-0.5 rounded-full text-xs sm:text-sm font-mono"
-                        >
-                          <img
-                            src={iconUrl}
-                            alt={tech}
-                            className="w-4 h-4"
-                            onError={(e) => (e.target.style.display = 'none')}
-                          />
-                          {tech}
-                        </span>
-                      );
-                    })}
+                  <div className="mt-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-accent-1 mb-1">
+                      Tech Stack:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.techStack.map((tech, i) => {
+                        const iconUrl = getTechIcon(tech);
+                        return (
+                          <span
+                            key={i}
+                            className="flex items-center gap-1 bg-accent-1/10 text-accent-1 px-2 py-0.5 rounded-full text-xs sm:text-sm font-mono"
+                          >
+                            <img
+                              src={iconUrl}
+                              alt={tech}
+                              className="w-4 h-4"
+                              onError={(e) => (e.target.style.display = 'none')}
+                            />
+                            {tech}
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
+
               </div>
             </motion.div>
           ))}

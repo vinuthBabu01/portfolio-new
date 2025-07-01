@@ -61,13 +61,19 @@ const Hero = () => {
           >
             View My Work
           </ScrollLink>
+          {/* <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 font-mono text-lg bg-accent-1 text-primary-bg rounded-md hover:bg-opacity-80 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-accent-1/30"
+          >View My Work</a> */}
           <a
             href={personalInfo.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 font-mono text-lg border-2 border-accent-1 text-accent-1 rounded-md hover:bg-accent-1 hover:text-primary-bg transition-all duration-300 flex items-center shadow-lg hover:shadow-accent-1/30"
           >
-            <FaDownload className="mr-2" /> Download CV
+            <FaDownload className="mr-2" /> Download Resume
           </a>
         </motion.div>
         <motion.div
