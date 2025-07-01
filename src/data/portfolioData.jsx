@@ -8,7 +8,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/vinuth-babu/",
   github: "https://github.com/vinuthBabu01",
   resumeLink: "/VinuthKalmidiResume.pdf", // Make sure your resume is in public/
-  bio: "Versatile Full Stack Engineer with a strong foundation in backend systems and data-driven applications. Passionate about building scalable, user-focused solutions and always eager to learn, grow, and contribute to collaborative engineering teams.",
+  bio: "Full Stack Engineer with a strong focus on backend systems, APIs, and data-driven solutions. Skilled in Node.js, React, MongoDB, and Docker, with hands-on experience in IoT, NLP, and cloud-native development. Dedicated to delivering scalable and reliable software.",
   shortBio: "I build things for the web." // For Hero section
 };
 
@@ -31,7 +31,7 @@ export const projects = [
   {
     title: "IoT-Based Smart Parking System with Dynamic Pricing",
     tech: ["ESP32", "MicroPython", "MQTT", "AWS IoT Core", "Python", "IoT", "Cloud Computing"],
-    description: "Engineered a smart parking system using ESP32 and AWS IoT Core to enable real-time vehicle detection and slot monitoring. Integrated a Python-based dynamic pricing engine to adjust rates based on occupancy, optimizing space utilization and boosting efficiency of urban infrastructure.",
+    description: "An IoT-based smart parking solution that uses ESP32 microcontrollers, ultrasonic sensors, and AWS IoT Core (via MQTT) for real-time slot detection. Developed a Python-based dynamic pricing engine to optimize parking fees based on demand and availability. The system enables automated slot monitoring and revenue optimization for parking spaces.",
     date: "Jan 2025 - May 2025",
     githubLink: null,
     liveLink: null,
@@ -39,9 +39,9 @@ export const projects = [
     icon: <FaCar size={24} className="text-accent-1" />
   },
   {
-    title: "TechNERD",
-    tech: ["Python", "RoBERTa", "BERT", "Scikit-learn", "Hugging Face Transformers", "Pandas", "NLP"],
-    description: "Built a two-stage NLP pipeline using transformer models (RoBERTa, BERT) to extract technical terms and predict user engagement on Stack Exchange posts. Achieved 74% cosine similarity in NER and a low MSE of 9.11 in engagement prediction, revealing key post trends from 2016–2024.",
+    title: "TechNERD - NLP & Machine Learning Pipeline",
+    tech: ["Python", "RoBERTa", "BERT", "Scikit-learn", "Pandas", "NLP"],
+    description: "Built an NLP pipeline using RoBERTa and Hugging Face Transformers for Named Entity Recognition (NER) on technical Stack Exchange posts, achieving 74% cosine similarity. Implemented a predictive model (MSE: 9.11) to forecast post engagement based on input features. Automated data scraping, cleaning, and feature extraction pipelines to process large datasets efficiently.",
     date: "Sep 2024 - Dec 2024",
     githubLink: null,
     liveLink: null,
@@ -49,9 +49,9 @@ export const projects = [
     icon: <FaBrain size={24} className="text-accent-1" />
   },
   {
-    title: "Airline Management System",
-    tech: ["Python", "JavaScript", "React.js", "OOP", "REST API", "JSON", "UML", "MongoDB"],
-    description: "Designed a full-stack Airline Management System demonstrating object-oriented principles and agile practices. Integrated real-time weather APIs to enhance flight safety and operational coordination, supported by UML diagrams and comprehensive SRS documentation.",
+    title: "Airline Management System with Weather API Integration",
+    tech: ["Python", "JavaScript", "React", "OOP", "REST API", "JSON", "UML", "MongoDB"],
+    description: "Designed a backend-driven airline management system with real-time Weather API integration for dynamic operational decisions. Built using object-oriented principles, it handles flight management, scheduling, and error handling. Supported by comprehensive system documentation including SRS, UML diagrams, and CRC cards for architecture clarity.",
     date: "Mar 2024 – May 2024",
     githubLink: null,
     liveLink: null,
@@ -59,9 +59,9 @@ export const projects = [
     icon: <FaPlane size={24} className="text-accent-1" />
   },
   {
-    title: "Dev Insights",
+    title: "Dev Insights — Developer Trends Dashboard",
     tech: ["Python", "Pandas", "Plotly", "Stack Overflow API", "Data Mining"],
-    description: "Developed a data mining pipeline to analyze 100K+ Stack Overflow posts, uncovering developer sentiment and tech trends. Built an interactive dashboard using Plotly to deliver predictive insights for curriculum planning and tooling decisions.",
+    description: "A web-based dashboard that analyzes and visualizes developer trends from Stack Overflow and GitHub. Utilized Stack Overflow APIs and GitHub APIs for real-time data fetching and displayed interactive charts on programming trends, hot technologies, and community engagement.",
     date: "Sep 2023 – Dec 2023",
     githubLink: null,
     liveLink: null,
@@ -91,125 +91,246 @@ export const projects = [
 
 ];
 
+// export const skills = {
+//   languages: [
+//     {
+//       name: "JavaScript",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+//     },
+//     {
+//       name: "C/C++",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+//     },
+//     {
+//       name: "HTML5",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+//     },
+//     {
+//       name: "CSS3",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+//     },
+//     {
+//       name: "Python",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+//     },
+//     {
+//       name: "Go",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+//     },
+//     {
+//       name: "SQL",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+//     },
+//   ],
+//   frameworksAndLibraries: [
+//     {
+//       name: "React",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+//     },
+//     {
+//       name: "Node.js",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+//     },
+//     {
+//       name: "Express.js",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+//     },
+//     {
+//       name: "Tailwind CSS",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+//     },
+//   ],
+//   toolsAndPlatforms: [
+//     {
+//       name: "MongoDB",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+//     },
+//     {
+//       name: "Postgresql",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+//     },
+//     {
+//       name: "GitHub",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+//     },
+//     {
+//       name: "VS Code",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+//     },
+//     {
+//       name: "Postman",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+//     },
+//     {
+//       name: "Docker",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+//     },
+//     {
+//       name: "Google Cloud",
+//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+//     },
+//   ],
+//   coreCompetencies: [
+//     "Full-Stack Web Development",
+//     "Backend Architecture & APIs",
+//     "Database Design & Management",
+//     "Cross-Functional Collaboration",
+//     "Cloud & DevOps Tools",
+//     "Debugging & Reliability Engineering",
+//     "Automation & Process Efficiency",
+//     "UI/UX Development",
+//     "System Performance Optimization",
+//     "Machine Learning & Data Projects",
+//     "Software Design Principles",
+//     "Growth Mindset & Learning "
+//   ],
+// };
+
 export const skills = {
-  languages: [
-    {
-      name: "JavaScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      name: "C/C++",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-    },
-    {
-      name: "HTML5",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-      name: "CSS3",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-      name: "Python",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    },
-    {
-      name: "Go",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
-    },
-    {
-      name: "SQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
+  frontend: [
+    { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
   ],
-  frameworksAndLibraries: [
-    {
-      name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "Node.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    },
-    {
-      name: "Express.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    },
+
+  backend: [
+    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+    { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { name: "REST APIs", icon: "rest-api-blue-logo.svg" }, // No direct icon; fallback works
   ],
+
+  databases: [
+    { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  ],
+
+  cloudAndDevOps: [
+    { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+    { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" }, 
+    { name: "Netlify", icon: "Netlify.svg" },
+  ],
+
+  dataAndNLP: [
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" }, // No icon in Devicon
+    { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+    { name: "scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+    { name: "Jupyter Notebook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+  ],
+
   toolsAndPlatforms: [
-    {
-      name: "MongoDB",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    },
-    {
-      name: "Postgresql",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    },
-    {
-      name: "GitHub",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    },
-    {
-      name: "VS Code",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-    },
-    {
-      name: "Postman",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
-    },
-    {
-      name: "Docker",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    },
-    {
-      name: "Google Cloud",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-    },
+    { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+    { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+    { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+ 
   ],
+
   coreCompetencies: [
     "Full-Stack Web Development",
     "Backend Architecture & APIs",
+    "Frontend Development with Modern Frameworks",
     "Database Design & Management",
+    "Machine Learning Model Development",
+    "Natural Language Processing (NLP)",
+    "Applied AI for Automation & Personalization",
+    "Large Language Model (LLM) Integration",
     "Cross-Functional Collaboration",
     "Cloud & DevOps Tools",
-    "Debugging & Reliability Engineering",
     "Automation & Process Efficiency",
     "UI/UX Development",
     "System Performance Optimization",
-    "Machine Learning & Data Projects",
     "Software Design Principles",
-    "Growth Mindset & Learning "
+    "Growth Mindset & Continuous Learning"
   ],
 };
 
+
 export const experience = [
-  {
-    role: "Software Engineer",
-    organization: "Byjus, India",
-    duration: "October 2021 - March 2023",
+
+ {
+    role: 'Research Intern',
+    organization: 'Syracuse University',
+    duration: 'June 2025 – Present',
+    description: 'Working on HireMate, an AI-powered job application assistant that automates the job search process using AI, NLP, and automation.',
     points: [
-      "Built scalable microservices and automated loan workflows that reduced processing time by 40% and improved operational efficiency by 30% for enterprise-grade Loan Management Systems.",
-      "Optimized core backend APIs using Node.js and Kafka, resulting in 30% faster response times, improved performance during peak load, and reliable real-time data sync.",
-      "Integrated APIs with financial institutions (e.g., ABFL, CreditSaison) to automate onboarding and foreclosure workflows, reducing borrower onboarding time by 25% and manual errors by 35%.",
-      "Designed and implemented a dynamic job assignment engine based on user availability and skillsets, improving customer service turnaround and reducing SLA violations.",
-      "Refactored legacy services into modular, testable microservices and collaborated with DevOps to implement CI/CD pipelines, cutting deployment time and post-release bugs by 20%.",
-      "Investigated and resolved production-critical issues including batch job failures and database inconsistencies, ensuring 99.9% system uptime and uninterrupted loan operations.",
-      "Collaborated across product, QA, and engineering teams to align technical design with business goals, contributing to a platform serving 10,000+ users with high reliability."
+      'Currently developing an end-to-end automated job application system capable of parsing resumes, scraping job listings, and generating tailored application documents.',
+      'Designing backend APIs with Python (Flask/FastAPI) to handle resume parsing, job scraping, and filtering based on user preferences and skills.',
+      'Integrating large language models such as OpenAI GPT to dynamically generate personalized resumes and cover letters for each job.',
+      'Building a React-based frontend to display job listings, job details, and provide downloadable, tailored documents.',
+      'Implementing job scraping pipelines for platforms like LinkedIn and Indeed using Python automation tools such as Selenium and BeautifulSoup.',
+      'Setting up deployment pipelines with Docker and GitHub Actions to deploy the application to a free-tier cloud platform.'
+    ],
+    techStack: [
+      'Python', 'Flask', 'FastAPI', 'React', 'OpenAI GPT', 'spaCy', 'Pyresparser', 'BeautifulSoup', 'Selenium', 'Docker', 'GitHub Actions'
+    ]
+  
+ },
+  {
+    role: 'Full Stack Software Engineer',
+    organization: 'Byju’s',
+    duration: 'Oct 2021 – Mar 2023',
+    description:
+      'As a Full Stack Engineer, I worked on Byju’s Loan Management Systems, contributing to backend API development, workflow automation, and partner integrations. My role focused on building scalable, production-grade systems that improved operational efficiency and financial data management.',
+    points: [
+      'Developed and optimized REST APIs and microservices using Node.js, Express, MongoDB, and PostgreSQL.',
+      'Automated the Green Channel loan approval process, reducing processing time by 40%.',
+      'Built a dynamic job assignment engine, improving task distribution efficiency by 30%.',
+      'Led backend API integrations with CreditSaison, Propelld, and FinancePeer, reducing onboarding time by 25%.',
+      'Delivered secure APIs for foreclosure and recovery workflows, improving compliance and reducing manual errors by 35%.',
+      'Optimized backend services and database queries to reduce response time by 50% under load.',
+      'Collaborated with cross-functional teams in Agile sprints, participating in code reviews and architecture discussions.',
+    ],
+    techStack: [
+      'Node.js',
+      'Express.js',
+      'React.js',
+      'MongoDB',
+      'PostgreSQL',
+      'Docker',
+      "Kafka",
+      'Postman',
+      'Git',
+      'GitHub Actions',
+      'REST APIs',
+      'Microservices',
+      'CI/CD',
     ],
   },
   {
-    role: "Intern - Web Developer",
-    organization: "TechCiti Technologies Private Limited",
-    duration: "March 2021 - May 2021",
+    role: 'Software Developer Intern',
+    organization: 'TechCiti Technologies',
+    duration: 'Mar 2021 – May 2021',
+    description:
+      'Contributed to the development of a full-stack web application while gaining hands-on experience in API development, database management, and deployment workflows.',
     points: [
-      "Engineered a responsive full-stack web application using React, JavaScript, and Bootstrap, elevating cross-platform usability and enhancing overall UI performance.",
-      "Implemented and integrated features across the front-end and back-end, strengthening database interactions and contributing to efficient project delivery in a production setting.",
+      'Built responsive frontend components with React.js and backend services with Node.js and Express.js.',
+      'Designed and implemented MongoDB schemas to manage structured and semi-structured data.',
+      'Created and maintained REST APIs for seamless data communication between frontend and backend.',
+      'Implemented CI/CD pipelines with Git and GitHub Actions, automating the deployment process.',
+      'Participated in sprint meetings, peer code reviews, and collaborated on solving technical challenges.',
     ],
-  }
+    techStack: [
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Docker',
+      'Git',
+      'Postman',
+      'GitHub Actions',
+      'REST APIs',
+      'CI/CD',
+    ],
+  },
 ];
 
 export const socialLinks = {

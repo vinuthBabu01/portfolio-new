@@ -30,11 +30,11 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary leading-relaxed">
-            Hi! I’m Vinuth Babu Kalmidi, a Full-Stack Software Engineer with a Master’s in Computer Engineering from Syracuse University and 2+ years of industry experience. I’ve built scalable backend systems, user focused web applications, and worked on projects ranging from automation workflows to data-driven dashboards. I enjoy learning, working collaboratively, and building software that solves real-world problems.
+          Hi! I’m Vinuth Babu Kalmidi, a Full Stack Software Engineer with 2+ years of professional experience and a Master’s in Computer Engineering from Syracuse University. I build scalable backend systems, robust APIs, and data-driven web applications. My work spans across automation workflows, IoT systems, and machine learning projects, all focused on solving real-world problems through clean, efficient code. I’m driven by a passion for building reliable software, collaborating with teams, and delivering impactful solutions.
           </p>
 
           <p className="text-sm text-text-primary font-mono mt-4 leading-relaxed">
-          "Authorized to work in the U.S. under F-1 OPT (STEM); no employer sponsorship needed currently, though future sponsorship may be required. Open to relocation across the United States."
+          Authorized to work in the U.S. under F-1 OPT (STEM Extension eligible); open to relocation nationwide. Future sponsorship is required.
           </p>
         </motion.div>
 
