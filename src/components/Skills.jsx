@@ -28,7 +28,7 @@ const SkillCard = ({ name, icon }) => {
     >
       {isImage ? (
         <img
-          src={icon.startsWith('http') ? icon : `/public/${icon}`}
+          src={icon.startsWith('http') ? icon : `/${icon}`}
           alt={name}
           className="w-12 h-12 mb-2 object-contain"
           loading="lazy"

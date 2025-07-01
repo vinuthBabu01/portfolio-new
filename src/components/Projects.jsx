@@ -65,7 +65,7 @@ const getTechIcon = (techName) => {
   const mapped = techNameMap[techName] || techName ;
 
   const cdnUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${mapped}/${mapped}-original.svg`;
-  const localUrl = `/public/${mapped}.svg`;
+  const localUrl = `/${mapped}.svg`;
 
   // Check if the mapped name is valid
   if (!mapped || typeof mapped !== 'string' || mapped.trim() === '') {
