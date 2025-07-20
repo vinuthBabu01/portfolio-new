@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "kvinuthbabu001@gmail.com",
   linkedin: "https://www.linkedin.com/in/vinuth-kalmidi/",
   github: "https://github.com/vinuthBabu01",
-  resumeLink: "/VinuthKalmidiResume.pdf", // Make sure your resume is in public/
+  resumeLink: "/Vinuth Babu Kalmidi.pdf", // Make sure resume is in public/
   bio: "Full Stack Engineer with a strong focus on backend systems, APIs, and data-driven solutions. Skilled in Node.js, React, MongoDB, and Docker, with hands-on experience in IoT, NLP, and cloud-native development. Dedicated to delivering scalable and reliable software.",
   shortBio: "I build things for the web." // For Hero section
 };
