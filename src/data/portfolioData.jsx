@@ -269,9 +269,6 @@ export const experience = [
       'Providing targeted feedback that directly informs model fine-tuning and prompt-optimization strategies.',
       'Collaborating asynchronously within global annotation teams to maintain high-quality standards for AI training datasets.'
     ],
-    techStack: [
-      'Python', 'Flask', 'FastAPI', 'React', 'OpenAI GPT', 'spaCy', 'Pyresparser', 'BeautifulSoup', 'Selenium', 'Docker', 'GitHub Actions'
-    ]
     
   },
 
