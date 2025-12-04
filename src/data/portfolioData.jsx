@@ -257,10 +257,28 @@ export const skills = {
 
 export const experience = [
 
+  {
+    role: 'AI Data Associate',
+    organization: 'RWS Group',
+    duration: 'Nov 2025 – Present',
+    description: 'Evaluate and refine AI-generated responses while auditing and optimizing LLM outputs to enhance accuracy, reliability, and reasoning quality.',
+    points: [
+      'Evaluating and scoring AI-generated responses to improve LLM reliability and reduce hallucinations across diverse knowledge domains.',
+      'Reviewing prompts and analyzing model behavior to identify gaps in reasoning, factual accuracy, tone, and intent alignment.',
+      'Writing improved responses using natural language techniques to teach models better clarity, structure, and correctness.',
+      'Providing targeted feedback that directly informs model fine-tuning and prompt-optimization strategies.',
+      'Collaborating asynchronously within global annotation teams to maintain high-quality standards for AI training datasets.'
+    ],
+    techStack: [
+      'Python', 'Flask', 'FastAPI', 'React', 'OpenAI GPT', 'spaCy', 'Pyresparser', 'BeautifulSoup', 'Selenium', 'Docker', 'GitHub Actions'
+    ]
+    
+  },
+
  {
-    role: 'Research Intern',
+    role: 'AI Software Engineer',
     organization: 'Syracuse University',
-    duration: 'June 2025 – Present',
+    duration: 'Jun 2025 – Present',
     description: 'Working on HireMate, an AI-powered job application assistant that automates the job search process using AI, NLP, and automation.',
     points: [
       'Currently developing an end-to-end automated job application system capable of parsing resumes, scraping job listings, and generating tailored application documents.',
@@ -278,7 +296,7 @@ export const experience = [
   {
     role: 'Full Stack Software Engineer',
     organization: 'Byju’s',
-    duration: 'Oct 2021 – Mar 2023',
+    duration: 'Aug 2021 – Jul 2023',
     description:
       'As a Full Stack Engineer, I worked on Byju’s Loan Management Systems, contributing to backend API development, workflow automation, and partner integrations. My role focused on building scalable, production-grade systems that improved operational efficiency and financial data management.',
     points: [
@@ -307,7 +325,7 @@ export const experience = [
     ],
   },
   {
-    role: 'Software Developer Intern',
+    role: 'Software Developer',
     organization: 'TechCiti Technologies',
     duration: 'Mar 2021 – May 2021',
     description:
