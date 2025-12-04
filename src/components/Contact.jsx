@@ -11,8 +11,7 @@ const contactItemVariants = {
     transition: {
       delay: i * 0.1,
       duration: 0.5,
-    },
-  }),
+    }, }),
 };
 
 const Contact = () => {
