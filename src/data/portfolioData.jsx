@@ -259,14 +259,12 @@ export const experience = [
 
   {
     role: 'AI Data Associate',
-    organization: 'RWS Group',
+    organization: 'META (via RWS Group)',
     duration: 'Nov 2025 – Present',
     description: 'Evaluate and refine AI-generated responses while auditing and optimizing LLM outputs to enhance accuracy, reliability, and reasoning quality.',
     points: [
-      'Evaluating and scoring AI-generated responses to improve LLM reliability and reduce hallucinations across diverse knowledge domains.',
-      'Reviewing prompts and analyzing model behavior to identify gaps in reasoning, factual accuracy, tone, and intent alignment.',
-      'Writing improved responses using natural language techniques to teach models better clarity, structure, and correctness.',
-      'Providing targeted feedback that directly informs model fine-tuning and prompt-optimization strategies.',
+      'Evaluating and scoring AI-generated responses to improve LLM reliability.',
+      'Modeling and evaluating AI models on multilingual datasets.',
       'Collaborating asynchronously within global annotation teams to maintain high-quality standards for AI training datasets.'
     ],
     
