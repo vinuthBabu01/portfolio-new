@@ -322,7 +322,7 @@ export const experience = [
   {
     role: 'Software Developer',
     organization: 'TechCiti Technologies',
-    duration: 'Mar 2021 – May 2021',
+    duration: 'Jan 2021 – June 2021',
     description:
       'Contributed to the development of a full-stack web application while gaining hands-on experience in API development, database management, and deployment workflows.',
     points: [
