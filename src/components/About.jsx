@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { personalInfo, education } from '../data/portfolioData.jsx';
-import { motion } from 'framer-motion';
-import { FaUniversity, FaSchool } from 'react-icons/fa'; // Example icons
+import { education } from '../data/portfolioData.jsx';
+import { motion as Motion } from 'framer-motion';
+import { FaUniversity } from 'react-icons/fa';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -18,51 +18,55 @@ const cardVariants = {
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-secondary-bg">
+    <section id="about" className="relative py-20 bg-secondary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle id="about-title">About Me</SectionTitle>
+        <SectionTitle id="about-title" eyebrow="Profile">About Me</SectionTitle>
 
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-12"
+        <Motion.div
+          className="mx-auto max-w-5xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg text-text-secondary leading-relaxed">
-          Hi! I’m Vinuth Babu Kalmidi, a Full Stack Software Engineer with 3+ years of professional experience and a Master’s in Computer Engineering from Syracuse University. I build scalable backend systems, robust APIs, and data-driven web applications. My work spans across automation workflows, IoT systems, and machine learning projects, all focused on solving real-world problems through clean, efficient code. I’m driven by a passion for building reliable software, collaborating with teams, and delivering impactful solutions.
-          </p>
+          <div className="ui-panel p-8">
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-accent-1/80">Who I Am</p>
+            <p className="text-lg leading-8 text-white/90">
+              Hi! I&apos;m Vinuth Babu Kalmidi, a full stack software engineer with 3+ years of professional experience and a Master&apos;s in Computer Engineering from Syracuse University. I build backend systems, APIs, and data-driven web applications with a strong focus on clarity, reliability, and real product needs.
+            </p>
+            <p className="mt-5 text-base leading-8 text-white/90">
+              My work spans automation workflows, AI-enabled systems,data pipelines and machine learning projects, and I enjoy working with teams to turn complex requirements into software that is practical, maintainable, and useful.
+            </p>
+          </div>
 
-          <p className="text-sm text-text-primary font-mono mt-4 leading-relaxed">
-          Authorized to work in the U.S. under F-1 OPT (STEM Extension eligible); open to relocation nationwide.
-          </p>
-        </motion.div>
+        </Motion.div>
 
-        <h3 className="text-2xl font-semibold text-center text-accent-1 mb-8 font-mono">Education</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-14">
+          <h3 className="mb-8 text-center text-2xl font-semibold text-text-primary">Education</h3>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
           {education.map((edu, index) => (
-            <motion.div
+            <Motion.div
               key={index}
-              className="bg-primary-bg p-6 rounded-lg shadow-xl hover:shadow-accent-1/20 transition-shadow duration-300"
+              className="rounded-[28px] border border-white/10 bg-primary-bg p-6 shadow-xl shadow-black/20 hover:shadow-accent-1/20 transition-shadow duration-300"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               custom={index}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="flex items-center mb-3">
-                {
-                  <FaUniversity className="text-accent-1 mr-3 text-2xl" />
-                }
-                <h4 className="text-xl font-semibold text-text-primary">{edu.institution}</h4>
+              <div className="mb-3 flex items-center">
+                <FaUniversity className="mr-3 text-2xl text-accent-1" />
+                <h4 className="text-lg font-semibold text-text-primary sm:text-xl">{edu.institution}</h4>
               </div>
-              <p className="text-text-secondary font-medium">{edu.degree}</p>
-              <p className="text-sm text-text-secondary font-mono">{edu.duration}</p>
-              <p className="text-sm text-accent-1 font-mono mt-1">{edu.score}</p>
-            </motion.div>
+              <p className="font-medium text-text-secondary">{edu.degree}</p>
+              <p className="mt-2 text-sm font-mono text-text-secondary">{edu.duration}</p>
+              <p className="mt-1 text-sm font-mono text-accent-1">{edu.score}</p>
+            </Motion.div>
           ))}
         </div>
       </div>
+      <div className="ui-bottom-fade-primary" />
     </section>
   );
 };

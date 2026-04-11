@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaReact, FaNodeJs, FaDatabase, FaCode, FaHtml5, FaCss3Alt, FaWordpress, FaFigma, FaCar, FaBrain, FaPlane, FaChartLine, FaShieldAlt, FaFutbol } from 'react-icons/fa'; // Example icons
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCar, FaBrain, FaPlane, FaChartLine, FaShieldAlt, FaFutbol, FaHome } from 'react-icons/fa';
 
 export const personalInfo = {
   name: "Vinuth Kalmidi",
@@ -7,9 +7,16 @@ export const personalInfo = {
   email: "kvinuthbabu001@gmail.com",
   linkedin: "https://www.linkedin.com/in/vinuth-kalmidi/",
   github: "https://github.com/vinuthBabu01",
-  resumeLink: "/VinuthKalmidiResume.pdf", // Make sure resume is in public/
-  bio: "Full Stack Engineer with a strong focus on backend systems, APIs, and data-driven solutions. Skilled in Node.js, React, MongoDB, and Docker, with hands-on experience in IoT, NLP, and cloud-native development. Dedicated to delivering scalable and reliable software.",
-  shortBio: "I build things for the web." // For Hero section
+  resumeLink: "/VinuthKalmidiResume.pdf",
+  bio: "Full Stack Engineer with a strong focus on backend systems, APIs, and data driven solutions. Skilled in Node.js, React, MongoDB, and Docker, with hands-on experience in IoT, NLP, and cloud-native development. Dedicated to delivering scalable and reliable software.",
+  shortBio: "I build things for the web.",
+  location: "Based in the U.S.",
+  availability: "Open to full-time software engineering roles",
+  heroStats: [
+    { label: "Years building", value: "3+" },
+    { label: "Production focus", value: "APIs + Backend" },
+    { label: "Domains", value: "IoT, AI, Data" },
+  ]
 };
 
 export const education = [
@@ -29,6 +36,19 @@ export const education = [
 
 export const projects = [
   {
+    title: "RentAgent: AI Rental Search Assistant",
+    tech: ["Temporal", "Anthropic Claude", "Tavily", "Node.js", "Express.js", "React.js", "Vite"],
+    description: "Currently building an AI-powered rental search assistant that helps renters discover stronger matches faster by searching across multiple sources, filtering irrelevant listings, checking landlord reputation, and returning a ranked shortlist based on user preferences.",
+    date: "Currently Building",
+    githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
+    liveLink: null,
+    category: "AI Agents",
+    icon: <FaHome size={24} className="text-accent-1" />,
+    highlight: "Durable multi-step rental search agent with web search, vetting, and ranking workflows",
+    outcomes: ["5-step workflow pipeline", "Landlord reputation checks", "Curated ranked property matches"],
+    accent: "from-emerald-300/30 via-cyan-400/10 to-transparent",
+  },
+  {
     title: "IoT-Based Smart Parking System with Dynamic Pricing",
     tech: ["ESP32", "MicroPython", "MQTT", "Python","AWS IoT Core", "IoT", "Cloud Computing"],
     description: "An IoT-based smart parking solution that uses ESP32 microcontrollers, ultrasonic sensors, and AWS IoT Core (via MQTT) for real-time slot detection. Developed a Python-based dynamic pricing engine to optimize parking fees based on demand and availability. The system enables automated slot monitoring and revenue optimization for parking spaces.",
@@ -36,7 +56,10 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "IoT",
-    icon: <FaCar size={24} className="text-accent-1" />
+    icon: <FaCar size={24} className="text-accent-1" />,
+    highlight: "Real-time parking intelligence with dynamic pricing",
+    outcomes: ["Live slot detection", "Demand-based pricing", "AWS IoT messaging"],
+    accent: "from-cyan-400/30 via-emerald-400/10 to-transparent",
   },
   {
     title: "TechNERD - NLP & Machine Learning Pipeline",
@@ -46,7 +69,10 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "NLP",
-    icon: <FaBrain size={24} className="text-accent-1" />
+    icon: <FaBrain size={24} className="text-accent-1" />,
+    highlight: "Transformer pipeline for extracting signals from developer text",
+    outcomes: ["74% cosine similarity", "Automated data pipeline", "Engagement prediction model"],
+    accent: "from-fuchsia-400/30 via-rose-400/10 to-transparent",
   },
   {
     title: "Airline Management System with Weather API Integration",
@@ -56,7 +82,10 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Software Design",
-    icon: <FaPlane size={24} className="text-accent-1" />
+    icon: <FaPlane size={24} className="text-accent-1" />,
+    highlight: "Operations-aware system design backed by weather data",
+    outcomes: ["Weather API integration", "OOP architecture", "System documentation"],
+    accent: "from-sky-400/30 via-blue-400/10 to-transparent",
   },
   {
     title: "Dev Insights — Developer Trends Dashboard",
@@ -66,7 +95,10 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Data Analytics",
-    icon: <FaChartLine size={24} className="text-accent-1" />
+    icon: <FaChartLine size={24} className="text-accent-1" />,
+    highlight: "Dashboarding live developer trends across communities",
+    outcomes: ["Interactive charts", "API-driven insights", "Trend visualization"],
+    accent: "from-amber-300/30 via-orange-400/10 to-transparent",
   },
   {
     title: "Network Anomaly Detection",
@@ -76,7 +108,10 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Cybersecurity",
-    icon: <FaShieldAlt size={24} className="text-accent-1" />
+    icon: <FaShieldAlt size={24} className="text-accent-1" />,
+    highlight: "ML-based traffic anomaly detection for wireless networks",
+    outcomes: ["AWID preprocessing", "Intrusion pattern analysis", "Model comparison visuals"],
+    accent: "from-red-400/30 via-orange-400/10 to-transparent",
   },
   {
     title: "Goal-360 ",
@@ -86,109 +121,18 @@ export const projects = [
     githubLink: `https://github.com/vinuthBabu01?tab=repositories`,
     liveLink: null,
     category: "Web Development",
-    icon: <FaFutbol size={24} className="text-accent-1" />
+    icon: <FaFutbol size={24} className="text-accent-1" />,
+    highlight: "Live sports interface for match data and league updates",
+    outcomes: ["Real-time score updates", "Multi-tournament coverage", "REST API integration"],
+    accent: "from-lime-300/30 via-emerald-400/10 to-transparent",
   }
 
 ];
 
-// export const skills = {
-//   languages: [
-//     {
-//       name: "JavaScript",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-//     },
-//     {
-//       name: "C/C++",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-//     },
-//     {
-//       name: "HTML5",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     },
-//     {
-//       name: "CSS3",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-//     },
-//     {
-//       name: "Python",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-//     },
-//     {
-//       name: "Go",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
-//     },
-//     {
-//       name: "SQL",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-//     },
-//   ],
-//   frameworksAndLibraries: [
-//     {
-//       name: "React",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-//     },
-//     {
-//       name: "Node.js",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-//     },
-//     {
-//       name: "Express.js",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-//     },
-//     {
-//       name: "Tailwind CSS",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-//     },
-//   ],
-//   toolsAndPlatforms: [
-//     {
-//       name: "MongoDB",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-//     },
-//     {
-//       name: "Postgresql",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-//     },
-//     {
-//       name: "GitHub",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-//     },
-//     {
-//       name: "VS Code",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-//     },
-//     {
-//       name: "Postman",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
-//     },
-//     {
-//       name: "Docker",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-//     },
-//     {
-//       name: "Google Cloud",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-//     },
-//   ],
-//   coreCompetencies: [
-//     "Full-Stack Web Development",
-//     "Backend Architecture & APIs",
-//     "Database Design & Management",
-//     "Cross-Functional Collaboration",
-//     "Cloud & DevOps Tools",
-//     "Debugging & Reliability Engineering",
-//     "Automation & Process Efficiency",
-//     "UI/UX Development",
-//     "System Performance Optimization",
-//     "Machine Learning & Data Projects",
-//     "Software Design Principles",
-//     "Growth Mindset & Learning "
-//   ],
-// };
-
 export const skills = {
   frontend: [
     { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "Angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
     { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -198,11 +142,10 @@ export const skills = {
   backend: [
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
     { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
     { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-    { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
-    { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "REST APIs", icon: "rest-api-blue-logo.svg" }, // No direct icon; fallback works
+    { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+    { name: "REST APIs", icon: "/rest-api-blue-logo.svg" },
+    { name: "Microservices", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
   ],
 
   databases: [
@@ -212,45 +155,50 @@ export const skills = {
   ],
 
   cloudAndDevOps: [
-    { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
-    {name: "AWS IoT Core", icon :"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"},
+    { name: "Temporal", icon: "/temporal.svg" },
     { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-    { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" }, 
-    { name: "Netlify", icon: "Netlify.svg" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+    { name: "Kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
+    { name: "AWS IoT Core", icon :"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"},
+    { name: "Netlify", icon: "/Netlify.svg" },
   ],
 
   dataAndNLP: [
-    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Anthropic Claude", icon: "/anthropic-claude.svg" },
+    { name: "Tavily", icon: "/tavily.svg" },
+    { name: "OpenAI GPT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openapi/openapi-original.svg" },
+    { name: "spaCy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Pyresparser", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
+    { name: "BeautifulSoup", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" }, // No icon in Devicon
     { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
     { name: "scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
-    { name: "Jupyter Notebook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
   ],
 
   toolsAndPlatforms: [
-    { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
     { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+    { name: "Jupyter Notebook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
     { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
- 
   ],
 
   coreCompetencies: [
-    "Full-Stack Web Development",
-    "Backend Architecture & APIs",
-    "Frontend Development with Modern Frameworks",
-    "Database Design & Management",
-    "Machine Learning Model Development",
-    "Natural Language Processing (NLP)",
-    "Applied AI for Automation & Personalization",
-    "Large Language Model (LLM) Integration",
+    "Backend Systems & API Design",
+    "Full-Stack Application Development",
+    "Workflow Automation",
+    "Database Design & Query Optimization",
+    "Partner API Integration",
+    "Production Issue Resolution",
+    "AI & LLM Integration",
+    "Resume Parsing & Job Matching Systems",
+    "Web Scraping & Automation",
     "Cross-Functional Collaboration",
-    "Cloud & DevOps Tools",
-    "Automation & Process Efficiency",
-    "UI/UX Development",
-    "System Performance Optimization",
-    "Software Design Principles",
-    "Growth Mindset & Continuous Learning"
+    "CI/CD & Deployment Workflows",
+    "System Reliability & Maintainability",
+    "Product-Focused Engineering"
   ],
 };
 
@@ -263,9 +211,9 @@ export const experience = [
     duration: 'Nov 2025 – Present',
     description: 'Evaluate and refine AI-generated responses while auditing and optimizing LLM outputs to enhance accuracy, reliability, and reasoning quality.',
     points: [
-      'Evaluating and scoring AI-generated responses to improve LLM reliability.',
-      'Modeling and evaluating AI models on multilingual datasets.',
-      'Collaborating asynchronously within global annotation teams to maintain high-quality standards for AI training datasets.'
+      'Evaluate and improve AI-generated responses across diverse domains to raise factual accuracy, reasoning quality, and instruction alignment.',
+      'Analyze prompt behavior, identify failure patterns, and provide targeted feedback that supports model tuning and response-quality improvements.',
+      'Rewrite low-quality outputs into clearer, more reliable answers that help strengthen training data standards at scale.'
     ],
     
   },
@@ -276,15 +224,12 @@ export const experience = [
     duration: 'Jun 2025 – Present',
     description: 'Working on HireMate, an AI-powered job application assistant that automates the job search process using AI, NLP, and automation.',
     points: [
-      'Currently developing an end-to-end automated job application system capable of parsing resumes, scraping job listings, and generating tailored application documents.',
-      'Designing backend APIs with Python (Flask/FastAPI) to handle resume parsing, job scraping, and filtering based on user preferences and skills.',
-      'Integrating large language models such as OpenAI GPT to dynamically generate personalized resumes and cover letters for each job.',
-      'Building a React-based frontend to display job listings, job details, and provide downloadable, tailored documents.',
-      'Implementing job scraping pipelines for platforms like LinkedIn and Indeed using Python automation tools such as Selenium and BeautifulSoup.',
-      'Setting up deployment pipelines with Docker and GitHub Actions to deploy the application to a free-tier cloud platform.'
+      'Built an AI-powered job application platform automating resume parsing, job matching, and application generation, reducing manual effort and improving application efficiency.',
+      'Developed backend services in Python with FastAPI and designed REST APIs to process unstructured resume data into structured formats for accurate matching and end-to-end workflow management.',
+      'Integrated LLM-based pipelines to generate personalized resumes and cover letters from job descriptions, implementing prompt workflows and validation layers to improve output consistency and reliability.'
     ],
     techStack: [
-      'Python', 'Flask', 'FastAPI', 'React', 'OpenAI GPT', 'spaCy', 'Pyresparser', 'BeautifulSoup', 'Selenium', 'Docker', 'GitHub Actions'
+      'Python', 'FastAPI', 'REST APIs', 'OpenAI GPT', 'spaCy', 'Pyresparser', 'BeautifulSoup', 'Selenium', 'Docker', 'GitHub Actions'
     ]
   
  },
@@ -293,15 +238,13 @@ export const experience = [
     organization: 'Byju’s',
     duration: 'Aug 2021 – Jul 2023',
     description:
-      'As a Full Stack Engineer, I worked on Byju’s Loan Management Systems, contributing to backend API development, workflow automation, and partner integrations. My role focused on building scalable, production-grade systems that improved operational efficiency and financial data management.',
+      'Worked on Byju’s loan management systems, contributing to backend API development, workflow automation, and partner integrations for production financial operations.',
     points: [
-      'Developed and optimized REST APIs and microservices using Node.js, Express, MongoDB, and PostgreSQL.',
-      'Automated the Green Channel loan approval process, reducing processing time by 40%.',
-      'Built a dynamic job assignment engine, improving task distribution efficiency by 30%.',
-      'Led backend API integrations with CreditSaison, Propelld, and FinancePeer, reducing onboarding time by 25%.',
-      'Delivered secure APIs for foreclosure and recovery workflows, improving compliance and reducing manual errors by 35%.',
-      'Optimized backend services and database queries to reduce response time by 50% under load.',
-      'Collaborated with cross-functional teams in Agile sprints, participating in code reviews and architecture discussions.',
+      'Built backend systems for a loan management platform, designing APIs and workflow engines to support the end-to-end loan lifecycle from initiation and approval to foreclosure across multiple lending partners.',
+      'Developed and optimized workflows to process 1,000+ loan applications daily, reducing manual intervention and improving operational turnaround time for teams operating across India.',
+      'Designed and implemented Green Channel, a rule-based automation service that removed a manual approval step and accelerated processing for eligible applications.',
+      'Owned production systems supporting business-critical financial operations, resolving 100+ production issues and improving reliability for operations and BI teams.',
+      'Integrated external partner APIs and maintained consistent data flow across services, enabling seamless processing across multiple financial partners.'
     ],
     techStack: [
       'Node.js',
@@ -326,23 +269,16 @@ export const experience = [
     description:
       'Contributed to the development of a full-stack web application while gaining hands-on experience in API development, database management, and deployment workflows.',
     points: [
-      'Built responsive frontend components with React.js and backend services with Node.js and Express.js.',
-      'Designed and implemented MongoDB schemas to manage structured and semi-structured data.',
-      'Created and maintained REST APIs for seamless data communication between frontend and backend.',
-      'Implemented CI/CD pipelines with Git and GitHub Actions, automating the deployment process.',
-      'Participated in sprint meetings, peer code reviews, and collaborated on solving technical challenges.',
+      'Built a case management system to digitize legal records, developing backend services using Node.js and PostgreSQL for structured data storage and retrieval.',
+      'Designed REST APIs to enable efficient querying and management of case data, improving accessibility and consistency across teams.',
+      'Developed Angular-based frontend components to streamline case tracking and simplify day-to-day workflows for legal users.'
     ],
     techStack: [
-      'React.js',
       'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Docker',
-      'Git',
+      'Angular',
+      'PostgreSQL',
       'Postman',
-      'GitHub Actions',
       'REST APIs',
-      'CI/CD',
     ],
   },
 ];

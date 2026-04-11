@@ -1,7 +1,7 @@
-import React from 'react';
 import SectionTitle from './SectionTitle';
-import { socialLinks, personalInfo } from '../data/portfolioData.jsx';
-import { motion } from 'framer-motion';
+import { personalInfo } from '../data/portfolioData.jsx';
+import { motion as Motion } from 'framer-motion';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const contactItemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -16,72 +16,92 @@ const contactItemVariants = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-primary-bg">
+    <section id="contact" className="relative py-20 bg-secondary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle id="contact-title">Get In Touch</SectionTitle>
+        <SectionTitle id="contact-title" eyebrow="Contact">Get In Touch</SectionTitle>
 
-        <motion.div
-          className="max-w-xl mx-auto text-center"
+        <Motion.div
+          className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-            I’m always open to connecting — whether it's about job opportunities, collaborations, feedback on my work, or just a tech chat. Feel free to drop me a message via the platforms below!
-          </p>
+          <div className="flex flex-col justify-center">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-accent-1/80">
+              Let&apos;s Build
+            </p>
+            <h3 className="text-3xl font-semibold leading-tight text-text-primary">
+              Open to <span className="text-accent-1">software engineering roles</span>, collaborations, and thoughtful product conversations.
+            </h3>
+            <p className="mt-5 text-base leading-8 text-text-secondary">
+              If you&apos;re <span className="font-semibold text-text-primary">hiring</span>, building something interesting, or want to talk through an idea, I&apos;d be happy to connect. The fastest way to reach me is <span className="font-semibold text-text-primary">email</span>, and LinkedIn is great for follow-up.
+            </p>
+          </div>
 
-          <div className="flex justify-center gap-6 flex-wrap md:flex-nowrap">
-            <a
+          <div className="grid gap-4 h-full grid-rows-3">
+            <Motion.a
               href={`mailto:${personalInfo.email}`}
-              className="whitespace-nowrap px-6 py-3 font-mono text-lg border-2 border-accent-1 text-accent-1 rounded-md hover:bg-accent-1 hover:text-primary-bg transition-all duration-300 flex items-center shadow-lg hover:shadow-accent-1/30"
-              aria-label="Email"
+              className="ui-contact-card"
+              variants={contactItemVariants}
+              initial="hidden"
+              whileInView="visible"
+              custom={2}
+              viewport={{ once: true }}
             >
-              Email Me
-            </a>
+              <div className="flex items-center gap-3">
+                <div className="rounded-xl bg-accent-1/10 p-3 text-accent-1"><FaEnvelope size={20} /></div>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-text-secondary">Email</p>
+                  <p className="mt-1 text-base text-text-primary">{personalInfo.email}</p>
+                </div>
+              </div>
+            </Motion.a>
 
-            <a
-              href={`${personalInfo.linkedin}`}
+            <Motion.a
+              href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="whitespace-nowrap px-6 py-3 font-mono text-lg border-2 border-accent-1 text-accent-1 rounded-md hover:bg-accent-1 hover:text-primary-bg transition-all duration-300 flex items-center shadow-lg hover:shadow-accent-1/30"
-              aria-label="LinkedIn"
+              className="ui-contact-card"
+              variants={contactItemVariants}
+              initial="hidden"
+              whileInView="visible"
+              custom={3}
+              viewport={{ once: true }}
             >
-              Message on LinkedIn
-            </a>
+              <div className="flex items-center gap-3">
+                <div className="rounded-xl bg-accent-1/10 p-3 text-accent-1"><FaLinkedin size={20} /></div>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-text-secondary">LinkedIn</p>
+                  <p className="mt-1 text-base text-text-primary">vinuth-kalmidi</p>
+                </div>
+              </div>
+            </Motion.a>
 
-            <a
-              href={`${personalInfo.github}`}
+            <Motion.a
+              href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="whitespace-nowrap px-6 py-3 font-mono text-lg border-2 border-accent-1 text-accent-1 rounded-md hover:bg-accent-1 hover:text-primary-bg transition-all duration-300 flex items-center shadow-lg hover:shadow-accent-1/30"
-              aria-label="GitHub"
+              className="ui-contact-card"
+              variants={contactItemVariants}
+              initial="hidden"
+              whileInView="visible"
+              custom={4}
+              viewport={{ once: true }}
             >
-              Visit GitHub
-            </a>
-          </div>
+              <div className="flex items-center gap-3">
+                <div className="rounded-xl bg-accent-1/10 p-3 text-accent-1"><FaGithub size={20} /></div>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-text-secondary">GitHub</p>
+                  <p className="mt-1 text-base text-text-primary">github.com/vinuthBabu01</p>
+                </div>
+              </div>
+            </Motion.a>
 
-          <div className="mt-12 flex justify-center space-x-6">
-            {Object.entries(socialLinks).map(([key, link], index) => (
-              <motion.a
-                key={key}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-accent-1 transition-colors"
-                aria-label={key}
-                variants={contactItemVariants}
-                initial="hidden"
-                whileInView="visible"
-                custom={index + 2}
-                viewport={{ once: true }}
-              >
-                {React.cloneElement(link.icon, { size: 32 })}
-              </motion.a>
-            ))}
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-primary-bg pointer-events-none" />
     </section>
   );
 };

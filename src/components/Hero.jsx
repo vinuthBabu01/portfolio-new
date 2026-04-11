@@ -1,108 +1,122 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { personalInfo, socialLinks } from '../data/portfolioData.jsx';
+import { personalInfo } from '../data/portfolioData.jsx';
 import { FaDownload } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-primary-bg relative overflow-hidden">
-      {/* Optional: Subtle background elements if you want */}
-      {/* <div className="absolute inset-0 opacity-5">
-        <img src="/path/to/subtle-code-pattern.svg" alt="background pattern" className="w-full h-full object-cover"/>
-      </div> */}
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h3 className="text-accent-1 font-mono text-lg sm:text-xl mb-3">
-            Hi, my name is
-          </h3>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-text-primary mb-4">
-            {personalInfo.name}.
-          </h1>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-secondary mb-6">
-            <TypeAnimation
-              sequence={[
-                'I solve problems.',
-                2000,
-                'I am a Full Stack Developer.',
-                2000,
-                'I build things.',
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="font-mono"
-            />
-          </h2>
-          <p className="text-text-secondary max-w-2xl mx-auto mb-8 text-base sm:text-lg">
-            {personalInfo.bio}
-          </p>
-
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
-        >
-          <ScrollLink
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="px-8 py-3 font-mono text-lg bg-accent-1 text-primary-bg rounded-md hover:bg-opacity-80 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-accent-1/30"
-          >
-            View My Work
-          </ScrollLink>
-          {/* <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 font-mono text-lg bg-accent-1 text-primary-bg rounded-md hover:bg-opacity-80 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-accent-1/30"
-          >View My Work</a> */}
-          <a
-            href={personalInfo.resumeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 font-mono text-lg border-2 border-accent-1 text-accent-1 rounded-md hover:bg-accent-1 hover:text-primary-bg transition-all duration-300 flex items-center shadow-lg hover:shadow-accent-1/30"
-          >
-            <FaDownload className="mr-2" /> Download Resume
-          </a>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex justify-center space-x-6"
-        >
-          {Object.values(socialLinks).map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-text-secondary hover:text-accent-1 transition-colors"
-              aria-label={link.url.split(':')[0]} // For accessibility e.g., "mailto", "https"
-            >
-              {React.cloneElement(link.icon, { size: 28 })}
-            </a>
-          ))}
-        </motion.div>
+    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden bg-primary-bg pt-0">
+      <div className="absolute inset-0">
+        <div className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-accent-1/15 blur-3xl" />
+        <div className="absolute right-[-8%] top-32 h-80 w-80 rounded-full bg-accent-2/15 blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.06] hero-grid-overlay" />
       </div>
 
-      {/* Scroll down indicator (optional) */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-8 xl:gap-10 lg:grid-cols-[minmax(0,0.98fr)_420px]">
+          <Motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-[33rem]"
+          >
+            <h1 className="mb-3 max-w-[34ch] text-[clamp(1.45rem,2.6vw,2rem)] font-bold leading-[1.5] text-text-primary">
+              I&apos;m <span className="text-accent-1">Vinuth Kalmidi</span>, a full stack engineer focused on backend systems, APIs, and data-driven applications.
+            </h1>
+            <p className="mb-3 max-w-lg text-sm leading-7 text-text-secondary sm:text-base">
+              I build software for products that need to scale, with a focus on clear systems, reliable APIs, and great user experience.
+            </p>
+            <div className="mb-6 min-h-[1.8rem] text-base font-medium leading-snug text-accent-1/80">
+              <TypeAnimation
+                sequence={[
+                  'Backend systems that stay reliable.',
+                  2000,
+                  'Interfaces that feel clear and fast.',
+                  2000,
+                  'Projects with real-world impact.',
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="block"
+              />
+            </div>
+
+            <div className="mb-5 grid max-w-[28rem] gap-3 sm:grid-cols-2">
+              <div className="ui-pill-accent inline-flex w-full items-center justify-center gap-2 px-3 py-2.5 text-center backdrop-blur sm:col-span-2">
+                <span className="h-2 w-2 rounded-full bg-accent-1 shadow-glow-accent" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] sm:text-[11px]">
+                  {personalInfo.availability}
+                </span>
+              </div>
+
+              <ScrollLink
+                to="experience"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="ui-button-primary flex min-w-0 items-center justify-center"
+              >
+                View Experience
+              </ScrollLink>
+              <a
+                href={personalInfo.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ui-button-secondary flex min-w-0 items-center justify-center"
+              >
+                <FaDownload className="mr-2" /> Resume
+              </a>
+            </div>
+          </Motion.div>
+
+          <Motion.aside
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="relative"
+          >
+            <div className="ui-panel p-4 lg:p-5">
+              <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-accent-1">Profile Snapshot</p>
+
+              <div className="divide-y divide-white/10">
+                <div className="pb-4">
+                  <p className="ui-meta-label">Experience</p>
+                  <p className="mt-1.5 text-base text-text-primary">3+ years building production grade software.</p>
+                </div>
+                <div className="py-4">
+                  <p className="ui-meta-label">Strengths</p>
+                  <p className="mt-1.5 text-base text-text-primary">Backend APIs, full stack apps, and workflow automation.</p>
+                </div>
+                <div className="py-4">
+                  <p className="ui-meta-label">Domain Exposure</p>
+                  <p className="mt-1.5 text-base text-text-primary">AI, IoT, analytics, and product engineering.</p>
+                </div>
+                <div className="pt-4">
+                  <p className="ui-meta-label">Work Authorization</p>
+                  <p className="mt-1.5 text-base text-text-primary">Authorized to work in the U.S under F-1 OPT.</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <span className="ui-pill-accent px-3 py-1 text-xs">U.S. based</span>
+                    <span className="ui-pill-accent px-3 py-1 text-xs">STEM OPT eligible</span>
+                    <span className="ui-pill-accent px-3 py-1 text-xs">Open to relocation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Motion.aside>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-secondary-bg pointer-events-none" />
+
       <ScrollLink
         to="about"
         smooth={true}
         duration={800}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 cursor-pointer animate-bounce md:block z-10"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

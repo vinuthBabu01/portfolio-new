@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+/*
+  CSS variables mirror src/styles/theme.js.
+  When changing colors, update theme.js AND these variables together.
+*/
+:root {
+  --primary-bg: #1a1a2e;
+  --bg-deep:    #121233;
+}
 
 @layer base {
   html {
@@ -11,10 +19,80 @@
   }
   body {
     @apply bg-primary-bg text-text-primary font-sans antialiased;
-    background-image: linear-gradient(135deg, #1a1a2e, #121233);
+    background-image: linear-gradient(135deg, var(--primary-bg), var(--bg-deep));
   }
   ::selection {
     @apply bg-accent-1 text-primary-bg;
+  }
+}
+
+@layer components {
+  .ui-panel {
+    @apply rounded-[24px] border border-white/10 bg-white/5 shadow-2xl shadow-black/30 backdrop-blur-md;
+  }
+
+  .ui-panel-soft {
+    @apply rounded-[24px] border border-white/10 bg-white/[0.03];
+  }
+
+  .ui-pill-accent {
+    @apply rounded-full border border-accent-1/30 bg-accent-1/10 text-accent-1;
+  }
+
+  .ui-pill-muted {
+    @apply rounded-full border border-white/10 bg-secondary-bg/70 text-text-secondary;
+  }
+
+  .ui-meta-label {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-widest text-accent-1/60;
+  }
+
+  .ui-contact-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 p-4 flex items-center transition-all duration-300 hover:border-accent-1/40 hover:bg-white/[0.07];
+  }
+
+  .ui-card-elevated {
+    @apply rounded-[24px] border border-white/10 bg-secondary-bg/95 shadow-xl shadow-black/20 transition-all duration-300;
+  }
+
+  .ui-card-hover-lift {
+    @apply hover:-translate-y-2 hover:border-accent-1/30 hover:shadow-accent-1/10;
+  }
+
+  .ui-tech-badge {
+    @apply flex items-center gap-1 rounded-full px-2.5 py-1 text-xs;
+  }
+
+  .ui-tech-badge-accent {
+    @apply ui-tech-badge border border-white/10 bg-primary-bg/80 font-mono text-accent-1;
+  }
+
+  .ui-tech-badge-muted {
+    @apply ui-tech-badge bg-white/[0.04] text-text-secondary;
+  }
+
+  .ui-category-pill {
+    @apply rounded-full border border-white/15 bg-black/20 px-3 py-1 font-mono text-xs uppercase tracking-[0.25em] text-text-secondary;
+  }
+
+  .ui-section-copy {
+    @apply text-base leading-8 text-text-secondary sm:text-lg;
+  }
+
+  .ui-bottom-fade-primary {
+    @apply absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-primary-bg pointer-events-none;
+  }
+
+  .ui-bottom-fade-secondary {
+    @apply absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-secondary-bg pointer-events-none;
+  }
+
+  .ui-button-primary {
+    @apply rounded-md bg-accent-1 px-6 py-3 text-base font-semibold text-primary-bg shadow-lg shadow-accent-1/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-hover;
+  }
+
+  .ui-button-secondary {
+    @apply rounded-md border border-accent-1/70 px-6 py-3 text-base font-medium text-accent-1 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-1 hover:text-primary-bg;
   }
 }
 
@@ -31,35 +109,56 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent-hover;
 }
-/* For section transitions (using your previous example) */
+
 .section-fade-in {
   opacity: 0;
   transform: translateY(20px);
 }
 
-/* --- ADD THESE STYLES FOR CARD FLIP --- */
+/* Shared grid overlay on card headers (Experience, Projects) */
+.card-grid-overlay {
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+}
+
+/* Hero section background grid */
+.hero-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Navbar logo flip card */
+.logo-flipper {
+  transform: rotateY(0deg);
+}
+.logo-flipper.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Card flip 3D support */
 .perspective {
-  perspective: 1000px; /* Creates the 3D space for children. Adjust value for more/less perspective. */
+  perspective: 1000px;
 }
-
 .experience-card-inner {
-  transform-style: preserve-3d; /* Allows children to be positioned in 3D space relative to this parent. */
+  transform-style: preserve-3d;
 }
-
 .experience-card-front,
 .experience-card-back {
-  backface-visibility: hidden; /* Hides the back of the card when it's not facing the viewer. */
-  -webkit-backface-visibility: hidden; /* For Safari browser compatibility. */
-  /* Ensure transitions on transform if you want smoother manual flips, though Tailwind handles the main flip */
-  /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */ /* Example, already handled by Tailwind's duration class on inner div */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-/* Project Card Styling */
+/* Project Card */
 .project-card {
   @apply bg-secondary-bg p-6 rounded-xl shadow-card transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-card-hover;
 }
 
-/* Tech Tag Styling */
+/* Tech Tag */
 .tech-tag {
   @apply text-xs font-medium px-2 py-1 bg-tag-bg text-accent-1 rounded-full transition-colors duration-200 hover:bg-tag-hover hover:text-primary-bg;
 }
@@ -73,10 +172,4 @@ p {
 }
 .section {
   @apply py-16 md:py-24;
-}
-
-@layer utilities {
-  .bg-accent-hover {
-    background-color: #26ffe3;
-  }
 }

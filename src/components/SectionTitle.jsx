@@ -1,21 +1,24 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
-const SectionTitle = ({ children, id }) => {
+const SectionTitle = ({ children, id, eyebrow = 'Section' }) => {
   return (
-    <motion.h2
+    <Motion.div
       id={id}
-      className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 font-mono text-accent-1 relative py-4"
+      className="mb-12 sm:mb-16 text-center"
       initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.5 }}
     >
-      <span className="relative z-10">{children}</span>
-      <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl sm:text-7xl font-bold text-secondary-bg opacity-30 z-0">
+      <p className="mb-3 font-mono text-xs uppercase tracking-[0.35em] text-accent-1/80">
+        {eyebrow}
+      </p>
+      <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         {children}
-      </span>
-    </motion.h2>
+      </h2>
+      <div className="mx-auto mt-4 h-px w-24 bg-gradient-to-r from-transparent via-accent-1 to-transparent" />
+    </Motion.div>
   );
 };
 
