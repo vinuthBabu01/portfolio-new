@@ -124,12 +124,37 @@
   background-size: auto, 32px 32px, 32px 32px;
 }
 
-/* Hero section background grid */
+/* Hero section background pattern */
 .hero-grid-overlay {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-  background-size: 64px 64px;
+    radial-gradient(circle at 14% 18%, rgba(0, 245, 195, 0.14), transparent 0 28%),
+    radial-gradient(circle at 86% 20%, rgba(98, 118, 255, 0.12), transparent 0 24%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.11) 0 1px, transparent 1.6px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 42%, rgba(255, 255, 255, 0.03));
+  background-size: auto, auto, 26px 26px, auto;
+  background-position: center;
+  filter: saturate(108%);
+  opacity: 0.82;
+  animation: hero-dot-shimmer 12s ease-in-out infinite alternate;
+}
+
+@keyframes hero-dot-shimmer {
+  0% {
+    opacity: 0.72;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0.84;
+    transform: translate3d(0, -0.35%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid-overlay {
+    opacity: 0.82;
+    animation: none;
+    transform: none;
+  }
 }
 
 /* Navbar logo flip card */

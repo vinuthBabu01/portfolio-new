@@ -5,13 +5,83 @@ import { FaDownload } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion as Motion } from 'framer-motion';
 
+const heroParticles = [
+  { left: '10%', top: '22%', size: 8, duration: 10, delay: 0, color: 'bg-accent-1/80' },
+  { left: '22%', top: '68%', size: 10, duration: 12, delay: 1.2, color: 'bg-white/60' },
+  { left: '38%', top: '34%', size: 6, duration: 9, delay: 0.8, color: 'bg-accent-1/70' },
+  { left: '54%', top: '74%', size: 12, duration: 13, delay: 0.5, color: 'bg-white/50' },
+  { left: '66%', top: '26%', size: 7, duration: 11, delay: 1.4, color: 'bg-accent-1/75' },
+  { left: '78%', top: '60%', size: 9, duration: 10, delay: 0.3, color: 'bg-white/55' },
+  { left: '86%', top: '18%', size: 6, duration: 8, delay: 1.1, color: 'bg-accent-1/80' },
+  { left: '92%', top: '46%', size: 11, duration: 14, delay: 0.6, color: 'bg-white/45' },
+];
+
 const Hero = () => {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden bg-primary-bg pt-0">
       <div className="absolute inset-0">
-        <div className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-accent-1/15 blur-3xl" />
-        <div className="absolute right-[-8%] top-32 h-80 w-80 rounded-full bg-accent-2/15 blur-3xl" />
-        <div className="absolute inset-0 opacity-[0.06] hero-grid-overlay" />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute left-[-18%] top-[18%] h-px w-[42rem] rotate-[10deg] bg-gradient-to-r from-transparent via-accent-1/80 to-transparent blur-[2px]"
+          animate={{ x: [0, 80, 10, 0], opacity: [0.18, 0.7, 0.28, 0.18] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute right-[-16%] top-[58%] h-px w-[36rem] rotate-[-14deg] bg-gradient-to-r from-transparent via-white/70 to-transparent blur-[2px]"
+          animate={{ x: [0, -70, -10, 0], opacity: [0.14, 0.5, 0.22, 0.14] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+        />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-accent-1/15 blur-3xl"
+          animate={{ x: [0, 18, -10, 0], y: [0, -14, 10, 0], scale: [1, 1.05, 0.98, 1] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute right-[-8%] top-32 h-80 w-80 rounded-full bg-accent-2/15 blur-3xl"
+          animate={{ x: [0, -22, 10, 0], y: [0, 16, -12, 0], scale: [1, 0.97, 1.04, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute left-[12%] top-[56%] h-28 w-28 rounded-full border border-white/10 bg-white/[0.03] blur-2xl"
+          animate={{ x: [0, 24, -12, 0], y: [0, -12, 16, 0], opacity: [0.14, 0.24, 0.16, 0.14] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <Motion.div
+          aria-hidden="true"
+          className="absolute right-[18%] top-[22%] h-20 w-20 rounded-full border border-accent-1/10 bg-accent-1/5 blur-2xl"
+          animate={{ x: [0, -18, 10, 0], y: [0, 10, -14, 0], opacity: [0.1, 0.22, 0.12, 0.1] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        {heroParticles.map((particle, index) => (
+          <Motion.div
+            key={`${particle.left}-${particle.top}-${index}`}
+            aria-hidden="true"
+            className={`absolute rounded-full ${particle.color} shadow-[0_0_18px_rgba(255,255,255,0.18)]`}
+            style={{
+              left: particle.left,
+              top: particle.top,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+            }}
+            animate={{
+              y: [0, -20, 8, 0],
+              x: [0, 10, -6, 0],
+              opacity: [0.25, 0.9, 0.45, 0.25],
+              scale: [1, 1.25, 0.95, 1],
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: particle.delay,
+            }}
+          />
+        ))}
+        <div className="absolute -inset-8 opacity-60 hero-grid-overlay" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
