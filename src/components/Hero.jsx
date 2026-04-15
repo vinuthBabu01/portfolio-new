@@ -28,7 +28,7 @@ const Hero = () => {
         />
         <Motion.div
           aria-hidden="true"
-          className="absolute right-[-4%] top-24 h-52 w-52 rounded-full bg-accent-2/50 blur-3xl"
+          className="absolute right-[-5%] top-24 h-52 w-52 rounded-full bg-accent-2/25 blur-3xl"
           animate={{ x: [0, -22, 10, 0], y: [0, 16, -12, 0], scale: [1, 0.97, 1.04, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
