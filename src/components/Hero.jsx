@@ -22,25 +22,13 @@ const Hero = () => {
       <div className="absolute inset-0">
         <Motion.div
           aria-hidden="true"
-          className="absolute left-[-18%] top-[18%] h-px w-[42rem] rotate-[10deg] bg-gradient-to-r from-transparent via-accent-1/80 to-transparent blur-[2px]"
-          animate={{ x: [0, 80, 10, 0], opacity: [0.18, 0.7, 0.28, 0.18] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <Motion.div
-          aria-hidden="true"
-          className="absolute right-[-16%] top-[58%] h-px w-[36rem] rotate-[-14deg] bg-gradient-to-r from-transparent via-white/70 to-transparent blur-[2px]"
-          animate={{ x: [0, -70, -10, 0], opacity: [0.14, 0.5, 0.22, 0.14] }}
-          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-        />
-        <Motion.div
-          aria-hidden="true"
-          className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-accent-1/15 blur-3xl"
+          className="absolute left-[-10%] top-20 h-48 w-48 rounded-full bg-accent-1/60 blur-3xl"
           animate={{ x: [0, 18, -10, 0], y: [0, -14, 10, 0], scale: [1, 1.05, 0.98, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
         />
         <Motion.div
           aria-hidden="true"
-          className="absolute right-[-8%] top-32 h-80 w-80 rounded-full bg-accent-2/15 blur-3xl"
+          className="absolute right-[2%] top-24 h-52 w-52 rounded-full bg-accent-2/90 blur-2xl"
           animate={{ x: [0, -22, 10, 0], y: [0, 16, -12, 0], scale: [1, 0.97, 1.04, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
