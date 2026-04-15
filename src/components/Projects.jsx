@@ -144,6 +144,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative py-20 bg-primary-bg">
+      <div className="absolute top-0 left-0 right-0 h-20 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #1a1a2e 0%, transparent 100%)' }} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle id="projects-title" eyebrow="Featured Work">Projects</SectionTitle>
         <div className="mb-8 max-w-2xl mx-auto text-center">
@@ -164,7 +165,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-secondary-bg pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 0%, #202040 100%)' }} />
     </section>
   );
 };

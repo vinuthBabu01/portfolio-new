@@ -96,18 +96,13 @@
   }
 }
 
-/* Scrollbar */
+/* Hide native scrollbar — replaced by ScrollProgressBar component */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
-::-webkit-scrollbar-track {
-  @apply bg-secondary-bg;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-accent-1 rounded-full;
-}
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-accent-hover;
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .section-fade-in {

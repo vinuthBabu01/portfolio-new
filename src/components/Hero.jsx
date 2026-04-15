@@ -161,9 +161,22 @@ const Hero = () => {
                   <p className="ui-meta-label">Strengths</p>
                   <p className="mt-1.5 text-base text-text-primary">Backend APIs, full stack apps, and workflow automation.</p>
                 </div>
-                <div className="py-4">
+                {/* <div className="py-4">
                   <p className="ui-meta-label">Domain Exposure</p>
                   <p className="mt-1.5 text-base text-text-primary">AI, IoT, analytics, and product engineering.</p>
+                </div> */}
+                <div className="py-4">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <p className="ui-meta-label">Building Now</p>
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent-1 animate-pulse" />
+                  </div>
+                  <p className="text-sm font-medium text-text-primary">RentAgent: AI Rental Search Assistant</p>
+                  <p className="text-sm text-text-primary leading-6 mt-0.5">Durable multi-step rental search agent with web search, vetting, and ranking workflows.</p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {['Temporal', 'Claude AI', 'Tavily', 'Node.js', 'React'].map(t => (
+                      <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-white/[0.05] text-text-secondary border border-white/[0.08]">{t}</span>
+                    ))}
+                  </div>
                 </div>
                 <div className="pt-4">
                   <p className="ui-meta-label">Work Authorization</p>
@@ -180,7 +193,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-secondary-bg pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 0%, #202040 100%)' }} />
 
       <ScrollLink
         to="about"

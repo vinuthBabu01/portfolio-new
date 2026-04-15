@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop'; // Optional
+import ScrollProgressBar from './components/ScrollProgressBar';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <ScrollToTop /> {/* Optional */}
+      <ScrollToTop />
+      <ScrollProgressBar />
     </div>
   );
 }

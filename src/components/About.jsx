@@ -19,6 +19,8 @@ const cardVariants = {
 const About = () => {
   return (
     <section id="about" className="relative py-20 bg-secondary-bg">
+      <div className="absolute top-0 left-0 right-0 h-20 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #202040 0%, transparent 100%)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 0%, #1a1a2e 100%)' }} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle id="about-title" eyebrow="Profile">About Me</SectionTitle>
 
