@@ -22,13 +22,13 @@ const Hero = () => {
       <div className="absolute inset-0">
         <Motion.div
           aria-hidden="true"
-          className="absolute left-[-10%] top-20 h-48 w-48 rounded-full bg-accent-1/60 blur-3xl"
+          className="absolute left-[-10%] top-20 h-48 w-48 rounded-full bg-accent-1/30 blur-3xl"
           animate={{ x: [0, 18, -10, 0], y: [0, -14, 10, 0], scale: [1, 1.05, 0.98, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
         />
         <Motion.div
           aria-hidden="true"
-          className="absolute right-[2%] top-24 h-52 w-52 rounded-full bg-accent-2/90 blur-2xl"
+          className="absolute right-[-4%] top-24 h-52 w-52 rounded-full bg-accent-2/50 blur-3xl"
           animate={{ x: [0, -22, 10, 0], y: [0, 16, -12, 0], scale: [1, 0.97, 1.04, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
