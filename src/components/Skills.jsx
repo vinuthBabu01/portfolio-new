@@ -112,7 +112,6 @@ const Skills = () => {
           </Motion.div>
         </div>
       </div>
-      <div className="ui-bottom-fade-secondary" />
     </section>
   );
 };

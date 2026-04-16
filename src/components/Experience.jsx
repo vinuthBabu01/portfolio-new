@@ -113,7 +113,6 @@ const Experience = () => {
           ))}
         </div>
       </div>
-      <div className="ui-bottom-fade-primary" />
     </section>
   );
 };

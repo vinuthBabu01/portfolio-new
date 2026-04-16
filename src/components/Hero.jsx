@@ -18,7 +18,7 @@ const heroParticles = [
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden bg-primary-bg pt-0">
+    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden bg-primary-bg px-0 pb-16 pt-28 sm:pt-32 lg:pt-20">
       <div className="absolute inset-0">
         <Motion.div
           aria-hidden="true"
