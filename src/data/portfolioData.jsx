@@ -204,19 +204,19 @@ export const skills = {
 
 
 export const experience = [
-// Contract Role and doesnt align with the profile - so not showcasing on profilr
-  {
-    role: 'AI Data Associate',
-    organization: 'META (via RWS Group)',
-    duration: 'Nov 2025 – Present',
-    description: 'Evaluate and refine AI-generated responses while auditing and optimizing LLM outputs to enhance accuracy, reliability, and reasoning quality.',
-    points: [
-      'Evaluate and improve AI-generated responses across diverse domains to raise factual accuracy, reasoning quality, and instruction alignment.',
-      'Analyze prompt behavior, identify failure patterns, and provide targeted feedback that supports model tuning and response-quality improvements.',
-      'Rewrite low-quality outputs into clearer, more reliable answers that help strengthen training data standards at scale.'
-    ],
+// Contract Role and doesnt align with the profile - so not showcasing on profile
+  // {
+  //   role: 'AI Data Associate',
+  //   organization: 'META (via RWS Group)',
+  //   duration: 'Nov 2025 – Present',
+  //   description: 'Evaluate and refine AI-generated responses while auditing and optimizing LLM outputs to enhance accuracy, reliability, and reasoning quality.',
+  //   points: [
+  //     'Evaluate and improve AI-generated responses across diverse domains to raise factual accuracy, reasoning quality, and instruction alignment.',
+  //     'Analyze prompt behavior, identify failure patterns, and provide targeted feedback that supports model tuning and response-quality improvements.',
+  //     'Rewrite low-quality outputs into clearer, more reliable answers that help strengthen training data standards at scale.'
+  //   ],
     
-  },
+  // },
 
  {
     role: 'AI Software Engineer',
